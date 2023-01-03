@@ -7,7 +7,9 @@ public class Aufgabe151 {
 	public static void main(String[] args) {
 		// eingabe
 		System.out.println("Geben Sie Ihre Email Adresse ein");
-		String eingabe = new Scanner(System.in).nextLine();
+		Scanner sc = new Scanner(System.in);
+		String eingabe = sc.nextLine();
+		sc.close();
 		eingabe = eingabe.toLowerCase();
 		System.out.println(eingabe);
 		if (eingabe.contains("@")) {
@@ -33,7 +35,7 @@ public class Aufgabe151 {
 			}
 		} else
 			System.out.println("Fehlermeldung: Kein Email-Adresse vorhanden");
-
+		
 	}
 
 }

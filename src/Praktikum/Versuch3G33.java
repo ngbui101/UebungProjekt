@@ -1,6 +1,8 @@
 package Praktikum;
 import java.util.Scanner;
 
+import javax.swing.plaf.synth.SynthOptionPaneUI;
+
 public class Versuch3G33 {
 	public static String[] eingabe() {
 		Scanner sc = new Scanner(System.in);
@@ -41,7 +43,11 @@ public class Versuch3G33 {
 	}
 
 	public static void main(String[] args) {
-		ausgabe();
+		try {
+			ausgabe();
+		} catch (Exception e) {
+			System.out.println("keine gültige Eingabe");
+		}
 	}
 
 }
