@@ -7,10 +7,12 @@ public class SparvertragApp {
 		String name = "Lam Bui";
 		double guthaben = 1000.;
 		String vertragArt = "NormSparvertrag";
-		sparkasse.vertragHinzufuegin(name, guthaben, vertragArt);
 		int dauer = 5;
+		//Vertrag hinzufügen
+		sparkasse.vertragHinzufuegin(name, guthaben, vertragArt);
+		//Casting
 		NormSparvertrag vertrag = (NormSparvertrag) sparkasse.getvertragArray()[0];
 		vertrag.addZins(dauer);
-		System.out.println("Saldo von dem Kunde " + vertrag.getSparer() + " betraegt: " + vertrag.getGuthaben()+ " Euro.");
+		System.out.printf("Kundensname: %s%nKontostand: %.2f Euro%n",vertrag.getSparer(),vertrag.getGuthaben());
 	}
 }

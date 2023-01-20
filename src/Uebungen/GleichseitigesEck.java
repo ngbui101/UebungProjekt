@@ -8,17 +8,9 @@ public abstract class GleichseitigesEck extends Flaeche {
 	}
 	@Override
 	int getUmfang() {
-		return 0;
+		return seitenLaenge*anzEcken;
 	}
-	public int getSeitenLaenge() {
-		return seitenLaenge;
-	}
-	public void setSeitenLaenge(int seitenLaenge) {
-		this.seitenLaenge = seitenLaenge;
-	}
-	public int getAnzEcken() {
-		return anzEcken;
-	}
+
 	public void setAnzEcken(int anzEcken) {
 		this.anzEcken = anzEcken;
 	}

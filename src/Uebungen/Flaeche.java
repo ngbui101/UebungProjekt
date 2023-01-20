@@ -4,7 +4,6 @@ public abstract class Flaeche {
 	private String type;
 
 	public Flaeche() {
-		this.type = "Flaeche";
 	}
 
 	public String getType() {

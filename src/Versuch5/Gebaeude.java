@@ -5,8 +5,7 @@ public abstract class Gebaeude {
 	private String klingelanlage;
 	private String alarmanlage;
 	private String automatischerTueroeffner;
-	public Gebaeude(String type, String klingeanlage, String alarmanlage, String automatischerTueroeffner) {
-		this.type = type;
+	public Gebaeude( String klingeanlage, String alarmanlage, String automatischerTueroeffner) {
 		this.klingelanlage = klingeanlage;
 		this.alarmanlage = alarmanlage;
 		this.automatischerTueroeffner = automatischerTueroeffner;
@@ -17,6 +16,9 @@ public abstract class Gebaeude {
 
 	void setAlarmanlage(String alarmanlage) {
 		this.alarmanlage = alarmanlage;
+	}
+	public void setType(String type) {
+		this.type = type;
 	}
 
 	void setAutomatischerTueroeffner(String automatischerTueroeffner) {

@@ -3,7 +3,8 @@ package Versuch5;
 public class Haus extends Gebaeude implements Einbau{
 
 	public Haus(String alarmanlage, String automatischerTueroeffner) {
-		super("Haus", "eingebaut", alarmanlage, automatischerTueroeffner);
+		super("eingebaut", alarmanlage, automatischerTueroeffner);
+		setType("Haus");
 	}
 	
 	@Override

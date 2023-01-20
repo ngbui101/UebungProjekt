@@ -6,6 +6,7 @@ public class Kreis extends Flaeche {
 	public Kreis(int radius) {
 		super.setType("Kreis");
 		this.radius = radius;
+//		this.type = "Kreis";
 	}
 
 	@Override

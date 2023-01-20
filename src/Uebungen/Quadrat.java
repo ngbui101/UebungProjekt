@@ -7,10 +7,4 @@ public class Quadrat extends GleichseitigesEck {
 		super.setAnzEcken(4);
 		super.setType("Quadrat");
 	}
-
-	@Override
-	int getUmfang() {
-		return 4*getSeitenLaenge();
-	}
-	
 }

@@ -7,11 +7,4 @@ public class Dreieck extends GleichseitigesEck {
 		super.setAnzEcken(3);
 		super.setType("Dreieck");
 	}
-
-	@Override
-	int getUmfang() {
-		return 3*getSeitenLaenge();
-	}
-	
-
 }
