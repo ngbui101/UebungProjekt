@@ -21,14 +21,6 @@ public class Haus {
 		this.bewohner = bewohner;
 	}
 	public void addPerson(String name, String vorname, int alter) {
-//		for (int i = 0; i < bewohner.length; i++) {
-//			if(bewohner[i] == null) {
-//				bewohner[i] = new Person(alter, name, vorname);
-//				break;
-//			}
-//			if(bewohner[bewohner.length-1] != null )
-//				System.out.println("Array ist voll, kein weitere Person hunzufuegin");
-//		}
 		Person[] temp = bewohner;
 		bewohner = new Person[temp.length+1];
 		for (int i = 0; i < temp.length; i++) {

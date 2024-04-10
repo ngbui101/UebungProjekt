@@ -1,16 +1,16 @@
-package Klausur2021;
+package JA1letztePRKlausur;
 
 public class BankSparvertraege {
 	private String name;
 	private Sparvertrag[] vertragArray;
 	public BankSparvertraege(String name) {
 		this.name = name;
-		vertragArray = new Sparvertrag[756];
+		vertragArray = new Sparvertrag[2];
 	}
-	public Sparvertrag[] getvertragArray() {
+	public Sparvertrag[] getVertragArray() {
 		return vertragArray;
 	}
-	public void vertragHinzufuegin(String sparer, double guthaben, String art) {
+	public void vertragHinzufuegen(String sparer, double guthaben, String art) {
 		boolean istVoll = false;
 		for (int i = 0; i < vertragArray.length; i++) {
 			if(vertragArray[i] == null && !istVoll) {
@@ -18,17 +18,23 @@ public class BankSparvertraege {
 					vertragArray[i] = new NormSparvertrag(sparer, guthaben);
 					break;
 				}
-				else if(art.equals("VertragPlus")) {
+				if(art.equals("VertragPlus")) {
 					vertragArray[i] = new VertragPlus(sparer, guthaben);
 					break;
+					}
+				else {
+					System.err.println("Keine passende Vertragart eingegeben");
+					break;
 				}
+	
 			}
-			if(vertragArray[vertragArray.length-1] != null) {
+			if(i == vertragArray.length-1){
 				istVoll = true;
 			}
 		}
 		if(istVoll)
 			System.err.println("Array ist voll");
 	}
+	
 	
 }
